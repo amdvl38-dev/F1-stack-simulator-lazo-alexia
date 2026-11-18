@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queue Data Structure Simulator</title>
+  <link rel="stylesheet" href="queue.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="title-bar">
+      <h1>Queue Data Structure Simulator</h1>
+    </header>
+
+    <div class="headers-row">
+      <div class="col-header">Operations</div>
+      <div class="col-header">Queue Data</div>
+      <div class="col-header">Deleted from Queue</div>
+    </div>
+
+    <div class="main-grid">
+      <!-- Operations Panel -->
+      <div class="panel operations-panel">
+        <input type="text" id="dataInput" placeholder="data" autocomplete="off" />
+        <button id="enqueueBtn" class="btn btn-enqueue">Enqueue</button>
+        <button id="dequeueBtn" class="btn btn-dequeue">Dequeue</button>
+        <button id="peekBtn" class="btn btn-peek">Peek</button>
+        <button id="clearBtn" class="btn btn-clear">Clear</button>
+        <p id="messageBox" class="message-box"></p>
+      </div>
+
+      <!-- Queue Display Panel (Top = Rear, Bottom = Front) -->
+      <div class="panel queue-panel">
+        <span class="pointer-label rear-label">REAR (Last In)</span>
+        <div id="queueContainer" class="items-container"></div>
+        <span class="pointer-label front-label">FRONT (First Out)</span>
+      </div>
+
+      <!-- Deleted Items Panel -->
+      <div class="panel deleted-panel">
+        <div id="deletedContainer" class="deleted-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="queue.js"></script>
+</body>
+</html>
+
